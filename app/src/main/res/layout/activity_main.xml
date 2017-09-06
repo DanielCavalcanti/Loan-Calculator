@@ -53,7 +53,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/Loan_hint"
-            android:inputType="numberDecimal|numberSigned"
+            android:inputType="numberDecimal|number"
             android:textColor="@color/colorGrey"
             android:textColorHint="@color/colorGrey"
             android:backgroundTint="@color/colorLightBlue" />
@@ -80,7 +80,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/term_hint"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:textColor="@color/colorGrey"
             android:textColorHint="@color/colorGrey"
             android:backgroundTint="@color/colorLightBlue"/>
@@ -107,7 +107,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/rate_hint"
-            android:inputType="numberDecimal|numberSigned"
+            android:inputType="numberDecimal|number"
             android:textColor="@color/colorGrey"
             android:textColorHint="@color/colorGrey"
             android:backgroundTint="@color/colorLightBlue"/>
