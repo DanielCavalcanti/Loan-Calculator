@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="toolbarTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textAppearance">@color/colorWhite</item>
+    </style>
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textColorHint">@color/colorGrey</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+</resources>
