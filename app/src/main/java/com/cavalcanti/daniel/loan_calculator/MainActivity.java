@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private String yearRate_str;
 
     private double var_loan_Amount;
-    private double var_term_loan_years;
+    private int var_term_loan_years;
     private double var_year_rate;
     private double var_monthlyPayment;
     private double var_totalPayment;
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private double var_monthlyRate;
 
     private Toast warningText;
+    LoanCalculator loan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         res_totalInterest = (TextView) findViewById(R.id.total_Interest_Result);
         res_totalPayment = (TextView) findViewById(R.id.total_Payment_result);
 
+        loan = new LoanCalculator();
+
     }
     public void loanResults(View view) {
         loanAmount_str = loanAmount_Etxt.getText().toString();
@@ -60,16 +63,14 @@ public class MainActivity extends AppCompatActivity {
             warningText.show();
         }else{
             var_loan_Amount = Double.parseDouble(loanAmount_str);
+            loan.setLoanAmount(var_loan_Amount);
             var_year_rate = Double.parseDouble(yearRate_str);
+            loan.setYearlyInterestRate(var_year_rate);
             var_term_loan_years = Integer.parseInt(termLoanYears_str);
-
-            var_monthlyRate = (var_year_rate/100)/12;
-
-            var_monthlyPayment =
-                    (var_loan_Amount*var_monthlyRate)/(1-Math.pow(1+var_monthlyRate, -(var_term_loan_years*12)));
-
-            var_totalPayment = var_monthlyPayment * (var_term_loan_years*12);
-            var_totalInterest = ((var_term_loan_years*12) * var_monthlyPayment)-var_loan_Amount;
+            loan.setNumberOfYears(var_term_loan_years);
+            var_monthlyPayment = loan.getMonthlyPayment();
+            var_totalInterest = loan.getTotalInterest();
+            var_totalPayment = loan.getTotalCostOfLoan();
 
             res_monthlyPayment.setText(new DecimalFormat("##.##").format(var_monthlyPayment));
             res_totalPayment.setText(new DecimalFormat("##.##").format(var_totalPayment));
