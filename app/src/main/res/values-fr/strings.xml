@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Loan Calculator</string>
+    <string name="calculate">Calculer</string>
+    <string name="clear">Effacer</string>
+    <string name="loanAmount">Montant du prêt</string>
+    <string name="mpayment">Paiement mensuel</string>
+    <string name="results">Résultats</string>
+    <string name="term">Durée du prêt (années)</string>
+    <string name="total_interest">Intérêt total</string>
+    <string name="total_payment">Paiement total</string>
+    <string name="warning">Doit saisir tous les champs avant de calculer</string>
+    <string name="year_rate">Taux annuel d\'intérêt</string>
+</resources>

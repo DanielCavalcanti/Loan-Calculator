@@ -9,8 +9,8 @@
     <string name="mpayment">Monthly Payment</string>
     <string name="total_interest">Total Interest</string>
     <string name="total_payment">Total Payment</string>
-    <string name="Loan_hint">50000</string>
-    <string name="term_hint">7</string>
-    <string name="rate_hint">7.5</string>
+    <string name="Loan_hint" translatable="false">50000</string>
+    <string name="term_hint" translatable="false">7</string>
+    <string name="rate_hint" translatable="false">7.5</string>
     <string name="warning">Must Input all fields before calculating</string>
 </resources>
